@@ -9,6 +9,7 @@ This is a simple school project, an ATM simulator implemented in Python, providi
 - Balance inquiry
 - PIN change option
 - Logging user actions
+- Keeps track of number of banknotes of each denomination, which is updated when you deposit or withdraw.
 
 ## Getting Started
 
