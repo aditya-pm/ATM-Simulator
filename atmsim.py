@@ -198,7 +198,7 @@ class AtmSim:
         
         elif amount % 100 != 0:
             return Fore.fstring(
-                "Withdrawal Failed! You can only withdraw in"
+                "Withdrawal Failed! You can only withdraw in "
                 "denominations of ₹100.", "RED"
             )
 
@@ -374,7 +374,7 @@ class AtmSim:
         print(Fore.fstring(
             f"Data creation successful! {self.user_table}", "GREEN"))
         self.cursor.execute(f"SELECT * FROM {self.user_table}")
-        print([x for x in self.cursor.fetchall()])
+        print(self.cursor.fetchall())
         self.cursor.execute(
             f'INSERT INTO {self.denomination_table} ' 
                 'values (250, 300, 350);'
@@ -383,4 +383,4 @@ class AtmSim:
         print(Fore.fstring(
             f"Data creation successful! {self.denomination_table}", "GREEN"))
         self.cursor.execute(f"SELECT * FROM {self.denomination_table}")
-        print([x for x in self.cursor.fetchall()])
+        print(self.cursor.fetchall())
